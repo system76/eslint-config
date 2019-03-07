@@ -1,0 +1,48 @@
+---
+
+root: true
+
+parserOptions:
+  parser: 'babel-eslint'
+  sourceType: 'module'
+
+env:
+  browser: true
+  node: true
+
+plugins:
+  - ava
+  - vue
+
+extends:
+  - plugin:ava/recommended
+  - plugin:vue/recommended
+  - standard
+
+rules:
+  # This is the default recommended with some custom keys added
+  # https://github.com/vuejs/eslint-plugin-vue/blob/master/lib/rules/order-in-components.js
+  vue/order-in-components:
+    - error
+    - order:
+      - el
+      - name
+      - parent
+      - functional
+      - ['delimiters', 'comments']
+      - layout
+      - meta
+      - ['components', 'directives', 'filters']
+      - extends
+      - mixins
+      - inheritAttrs
+      - model
+      - ['props', 'propsData']
+      - ['data','asyncData']
+      - computed
+      - watch
+      - LIFECYCLE_HOOKS
+      - load
+      - methods
+      - ['template', 'render']
+      - renderError

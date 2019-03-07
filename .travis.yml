@@ -1,0 +1,18 @@
+---
+
+language: node_js
+
+node_js: lts/*
+
+script:
+  - npm audit
+  - npm run lint
+  - npm run test
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: npm run release
+  on:
+    repo: system76/web-eslint-config-standard
+    branch: master

@@ -1,0 +1,58 @@
+{
+  "name": "@system76/eslint-config-standard",
+  "version": "0.0.0-development",
+  "description": "System76 standard eslint linting configuration",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/system76/web-eslint-config-standard.git"
+  },
+  "dependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-ava": "^5.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.2.2"
+  },
+  "devDependencies": {
+    "ava": "^1.2.1",
+    "commitizen": "^3.0.7",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^5.9.0",
+    "semantic-release": "^15.10.8"
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "lint": "eslint test/**/*.js",
+    "release": "semantic-release",
+    "test": "ava"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [
+    "eslint",
+    "hint",
+    "lint",
+    "regular",
+    "standard",
+    "style",
+    "system76"
+  ],
+  "author": "System76 <hosting@system76.com> (https://system76.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/system76/web-eslint-config-standard/issues"
+  },
+  "homepage": "https://github.com/system76/web-eslint-config-standard#readme"
+}
