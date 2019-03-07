@@ -6,12 +6,20 @@
 </div>
 
 <p align="center">
+  <a href="https://www.npmjs.com/package/@system76/eslint-config-standard/">
+    <img src="https://img.shields.io/npm/v/@system76/eslint-config-standard.svg" alt="npm">
+  </a>
+
   <a href="https://travis-ci.org/system76/web-eslint-config-standard">
     <img src="https://travis-ci.org/system76/web-eslint-config-standard.svg" alt="travis-ci">
   </a>
 
   <a href="https://greenkeeper.io/">
     <img src="https://badges.greenkeeper.io/system76/web-eslint-config-standard.svg" alt="greenkeeper">
+  </a>
+
+  <a href="https://standardjs.com">
+    <img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="standard">
   </a>
 </p>
 
