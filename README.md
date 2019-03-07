@@ -5,6 +5,16 @@
   <br>
 </div>
 
+<p align="center">
+  <a href="https://travis-ci.org/system76/houston">
+    <img src="https://travis-ci.org/system76/web-eslint-config-standard.svg" alt="travis-ci">
+  </a>
+
+  <a href="https://greenkeeper.io/">
+    <img src="https://badges.greenkeeper.io/system76/web-eslint-config-standard.svg" alt="greenkeeper">
+  </a>
+</p>
+
 ---
 
 This is a System76 extension of [standard](https://github.com/feross/standard)
