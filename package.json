@@ -2,6 +2,7 @@
   "name": "@system76/eslint-config-standard",
   "version": "0.0.0-development",
   "description": "System76 standard eslint linting configuration",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/system76/web-eslint-config-standard.git"
@@ -25,7 +26,7 @@
   },
   "scripts": {
     "commit": "git-cz",
-    "lint": "eslint test/**/*.js",
+    "lint": "eslint --config eslintrc.json test/**/*.js",
     "release": "semantic-release",
     "test": "ava"
   },

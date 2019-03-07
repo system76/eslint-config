@@ -10,7 +10,7 @@ const test = require('ava')
 function lint (file) {
   const cli = new eslint.CLIEngine({
     useEslintrc: false,
-    configFile: '.eslintrc.yml'
+    configFile: 'eslintrc.json'
   })
 
   const result = cli.executeOnFiles([file])
