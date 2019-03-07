@@ -6,7 +6,7 @@
 </div>
 
 <p align="center">
-  <a href="https://travis-ci.org/system76/houston">
+  <a href="https://travis-ci.org/system76/web-eslint-config-standard">
     <img src="https://travis-ci.org/system76/web-eslint-config-standard.svg" alt="travis-ci">
   </a>
 
