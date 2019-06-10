@@ -7,7 +7,7 @@ const eslint = require('eslint')
 const path = require('path')
 const test = require('ava')
 
-function lint (file) {
+function lint (t, file) {
   const cli = new eslint.CLIEngine({
     useEslintrc: false,
     configFile: 'eslintrc.json'
@@ -15,17 +15,16 @@ function lint (file) {
 
   const result = cli.executeOnFiles([file])
 
-  if (result.errorCount > 0 || result.warningCount > 0) {
-    throw new Error(`${result.errorCount} error/s and ${result.warningCount} warnings/s`)
-  } else {
-    return result
-  }
+  result.results.map((res) => res.messages.forEach(t.log))
+
+  t.is(result.errorCount, 0, 'Non 0 error count')
+  t.is(result.warningCount, 0, 'Non 0 warning count')
 }
 
 test('lints javascript files correctly', (t) => {
-  return t.notThrows(() => lint(path.join(__dirname, '_fixture.js')))
+  return lint(t, path.join(__dirname, '_fixture.js'))
 })
 
 test('lints vue files correctly', (t) => {
-  return t.notThrows(() => lint(path.join(__dirname, '_fixture.vue')))
+  return lint(t, path.join(__dirname, '_fixture.vue'))
 })

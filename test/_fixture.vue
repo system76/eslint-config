@@ -112,7 +112,7 @@
 
 <script>
 import { FormInput } from '../mixins'
-import InputError from './input-error'
+import InputError from '../components/input-error'
 
 export default {
   name: 'BaseInput',
