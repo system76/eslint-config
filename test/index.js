@@ -3,9 +3,9 @@
  * Ensures our code lints correctly
  */
 
+const test = require('ava')
 const eslint = require('eslint')
 const path = require('path')
-const test = require('ava')
 
 const IGNORED_RULES = [
   // Impossible to test these ava rules in an ava test...
