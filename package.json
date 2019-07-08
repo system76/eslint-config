@@ -34,6 +34,12 @@
   "publishConfig": {
     "access": "public"
   },
+  "ava": {
+    "files": [
+      "test/**",
+      "!test/_fixtures"
+    ]
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"

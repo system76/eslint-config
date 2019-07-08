@@ -7,24 +7,33 @@ const eslint = require('eslint')
 const path = require('path')
 const test = require('ava')
 
+const IGNORED_RULES = [
+  // Impossible to test these ava rules in an ava test...
+  'ava/no-import-test-files'
+]
+
 function lint (t, file) {
   const cli = new eslint.CLIEngine({
     useEslintrc: false,
     configFile: 'eslintrc.json'
   })
 
-  const result = cli.executeOnFiles([file])
+  const results = cli.executeOnFiles([file]).results[0].messages
+    .filter((res) => !IGNORED_RULES.includes(res.ruleId))
 
-  result.results.map((res) => res.messages.forEach(t.log))
+  t.log(results)
 
-  t.is(result.errorCount, 0, 'Non 0 error count')
-  t.is(result.warningCount, 0, 'Non 0 warning count')
+  const errors = results.filter((res) => (res.severity === 2))
+  const warnings = results.filter((res) => (res.severity === 1))
+
+  t.deepEqual(errors, [], 'Non 0 error count')
+  t.deepEqual(warnings, [], 'Non 0 warning count')
 }
 
 test('lints javascript files correctly', (t) => {
-  return lint(t, path.join(__dirname, '_fixture.js'))
+  return lint(t, path.join(__dirname, '_fixtures/file.js'))
 })
 
 test('lints vue files correctly', (t) => {
-  return lint(t, path.join(__dirname, '_fixture.vue'))
+  return lint(t, path.join(__dirname, '_fixtures/file.vue'))
 })
