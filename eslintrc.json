@@ -30,6 +30,7 @@
       "groups": [
         "module",
         "/^@system76/",
+        "/~\//",
         ["parent", "sibling", "index"]
       ],
       "newlinesBetween": "always"

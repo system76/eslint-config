@@ -9,6 +9,7 @@ const path = require('path')
 
 const IGNORED_RULES = [
   // Impossible to test these ava rules in an ava test...
+  'ava/no-ignored-test-files',
   'ava/no-import-test-files'
 ]
 
@@ -36,4 +37,12 @@ test('lints javascript files correctly', (t) => {
 
 test('lints vue files correctly', (t) => {
   return lint(t, path.join(__dirname, '_fixtures/file.vue'))
+})
+
+test('sorts import lines correctly', (t) => {
+  return lint(t, path.join(__dirname, '_fixtures/files.js'))
+})
+
+test('lints Ava test files correctly', (t) => {
+  return lint(t, path.join(__dirname, '_fixtures/test.js'))
 })

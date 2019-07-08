@@ -1,5 +1,5 @@
 /**
- * standard/test/_fixture.vue
+ * test/_fixtures/file.vue
  * A simple vue component to style an html `input` tag. Copied from tachi.
  */
 

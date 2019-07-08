@@ -1,5 +1,5 @@
 /**
- * standard/test/_fixture.js
+ * test/_fixtures/file.js
  * A basic cast and dump based on schema utility. Used in the store and in a
  * couple of other places to persist data locally. Copied from tachi.
  *
