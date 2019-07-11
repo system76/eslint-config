@@ -10,8 +10,8 @@
     <img src="https://img.shields.io/npm/v/@system76/eslint-config.svg" alt="npm">
   </a>
 
-  <a href="https://travis-ci.org/system76/web-eslint-config">
-    <img src="https://travis-ci.org/system76/web-eslint-config.svg" alt="travis-ci">
+  <a href="https://travis-ci.org/system76/eslint-config">
+    <img src="https://travis-ci.org/system76/eslint-config.svg" alt="travis-ci">
   </a>
 
   <a href="https://renovatebot.com/">
@@ -76,4 +76,4 @@ Past that, just push to master and [travis][travis] will take care of the rest.
 
 [semantic]: https://github.com/semantic-release/semantic-release
 [acmc]: https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines
-[travis]: https://travis-ci.org/system76/web-eslint-config
+[travis]: https://travis-ci.org/system76/eslint-config
