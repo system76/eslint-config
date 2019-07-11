@@ -1,11 +1,11 @@
 {
-  "name": "@system76/eslint-config-standard",
+  "name": "@system76/eslint-config",
   "version": "0.0.0-development",
   "description": "System76 standard eslint linting configuration",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/system76/web-eslint-config-standard.git"
+    "url": "git+https://github.com/system76/web-eslint-config.git"
   },
   "dependencies": {
     "babel-eslint": "^10.0.2",
@@ -60,7 +60,7 @@
   "author": "System76 <hosting@system76.com> (https://system76.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/system76/web-eslint-config-standard/issues"
+    "url": "https://github.com/system76/web-eslint-config/issues"
   },
-  "homepage": "https://github.com/system76/web-eslint-config-standard#readme"
+  "homepage": "https://github.com/system76/web-eslint-config#readme"
 }
