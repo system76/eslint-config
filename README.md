@@ -47,6 +47,19 @@ module.exports = {
 }
 ```
 
+Then add these lines to your `package.json` file:
+
+```json
+{
+  "scripts": {
+    "lint:js": "eslint --ext js,vue --ignore-path .gitignore .",
+    "lint:js:fix": "eslint --fix --ext js,vue --ignore-path .gitignore ."
+  }
+}
+```
+
+And finally, you can lint with `npm run lint:js`.
+
 ## Development
 
 There's not much to it. Aside from the few test files we check, the only file
