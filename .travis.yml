@@ -13,5 +13,5 @@ deploy:
   skip_cleanup: true
   script: npm run release
   on:
-    repo: system76/web-eslint-config
+    repo: system76/eslint-config
     branch: master
