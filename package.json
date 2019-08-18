@@ -19,10 +19,10 @@
     "eslint-plugin-vue": "^5.2.3"
   },
   "devDependencies": {
-    "ava": "^2.2.0",
+    "ava": "^2.3.0",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.0.2",
-    "eslint": "^6.1.0",
+    "eslint": "^6.2.0",
     "semantic-release": "^15.13.21"
   },
   "scripts": {
