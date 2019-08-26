@@ -8,7 +8,7 @@
     "url": "git+https://github.com/system76/web-eslint-config.git"
   },
   "dependencies": {
-    "babel-eslint": "^10.0.2",
+    "babel-eslint": "^10.0.3",
     "eslint-config-standard": "^14.0.1",
     "eslint-plugin-ava": "^8.0.0",
     "eslint-plugin-import": "^2.18.2",
