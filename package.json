@@ -22,7 +22,7 @@
     "ava": "^2.3.0",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.0.2",
-    "eslint": "^6.2.2",
+    "eslint": "^6.3.0",
     "semantic-release": "^15.13.24"
   },
   "scripts": {
