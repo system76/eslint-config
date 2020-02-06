@@ -21,6 +21,13 @@
     "standard"
   ],
 
+  "overrides": [{
+    "files": ["*.vue"],
+    "rules": {
+      "indent": "off"
+    }
+  }],
+
   "rules": {
     "import-helpers/order-imports": ["error", {
       "alphabetize": {
@@ -60,6 +67,10 @@
         ["template", "render"],
         "renderError"
       ]
+    }],
+
+    "vue/script-indent": ["error", 2, {
+      "baseIndent": 1
     }]
   }
 }

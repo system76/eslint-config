@@ -111,22 +111,22 @@
 </style>
 
 <script>
-import InputError from '../components/input-error'
-import { FormInput } from '../mixins'
+  import InputError from '../components/input-error'
+  import { FormInput } from '../mixins'
 
-export default {
-  name: 'BaseInput',
+  export default {
+    name: 'BaseInput',
 
-  components: {
-    InputError
-  },
+    components: {
+      InputError
+    },
 
-  mixins: [
-    FormInput({
-      type: [String, Number]
-    })
-  ],
+    mixins: [
+      FormInput({
+        type: [String, Number]
+      })
+    ],
 
-  inheritAttrs: false
-}
+    inheritAttrs: false
+  }
 </script>
