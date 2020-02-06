@@ -13,7 +13,7 @@ const IGNORED_RULES = [
   'ava/no-import-test-files'
 ]
 
-function lint (t, file) {
+function lint (file) {
   const cli = new eslint.CLIEngine({
     useEslintrc: false,
     configFile: 'eslintrc.json'
@@ -22,8 +22,10 @@ function lint (t, file) {
   const results = cli.executeOnFiles([file]).results[0].messages
     .filter((res) => !IGNORED_RULES.includes(res.ruleId))
 
-  t.log(results)
+  return results
+}
 
+function successfulLint(t, results) {
   const errors = results.filter((res) => (res.severity === 2))
   const warnings = results.filter((res) => (res.severity === 1))
 
@@ -31,18 +33,36 @@ function lint (t, file) {
   t.deepEqual(warnings, [], 'Non 0 warning count')
 }
 
+function lintIncludesError(t, results, rule, line) {
+  const matchingErrors = results
+    .filter((res) => (res.ruleId === rule))
+    .filter((res) => (line != null) ? (res.line === line) : true)
+
+  t.notDeepEqual(matchingErrors, [], 'No matching errors found')
+}
+
 test('lints javascript files correctly', (t) => {
-  return lint(t, path.join(__dirname, '_fixtures/file.js'))
+  successfulLint(t, lint(path.join(__dirname, '_fixtures/file.js')))
 })
 
 test('lints vue files correctly', (t) => {
-  return lint(t, path.join(__dirname, '_fixtures/file.vue'))
+  successfulLint(t, lint(path.join(__dirname, '_fixtures/file.vue')))
+})
+
+test('detects vue file script indentation', (t) => {
+  const results = lint(path.join(__dirname, '_fixtures/error.vue'))
+  lintIncludesError(t, results, 'vue/script-indent', 114)
+})
+
+test('detects vue file template indentation', (t) => {
+  const results = lint(path.join(__dirname, '_fixtures/error.vue'))
+  lintIncludesError(t, results, 'vue/html-indent', 7)
 })
 
 test('sorts import lines correctly', (t) => {
-  return lint(t, path.join(__dirname, '_fixtures/files.js'))
+  successfulLint(t, lint(path.join(__dirname, '_fixtures/files.js')))
 })
 
 test('lints Ava test files correctly', (t) => {
-  return lint(t, path.join(__dirname, '_fixtures/test.js'))
+  successfulLint(t, lint(path.join(__dirname, '_fixtures/test.js')))
 })
