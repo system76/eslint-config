@@ -10,20 +10,20 @@
   "dependencies": {
     "babel-eslint": "^10.0.3",
     "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-ava": "^9.0.0",
-    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-ava": "^10.0.1",
+    "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-import-helpers": "^1.0.2",
-    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-vue": "^5.2.3"
+    "eslint-plugin-vue": "^6.1.2"
   },
   "devDependencies": {
-    "ava": "^2.4.0",
+    "ava": "^3.2.0",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.1.0",
     "eslint": "^6.8.0",
-    "semantic-release": "^15.13.24"
+    "semantic-release": "^17.0.2"
   },
   "scripts": {
     "commit": "git-cz",
@@ -46,7 +46,7 @@
     }
   },
   "engines": {
-    "node": ">=8"
+    "node": ">=10.18"
   },
   "keywords": [
     "eslint",
