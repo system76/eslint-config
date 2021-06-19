@@ -8,22 +8,19 @@
     "url": "git+https://github.com/system76/web-eslint-config.git"
   },
   "dependencies": {
+    "@nuxtjs/eslint-config": "^6.0.1",
     "babel-eslint": "^10.1.0",
-    "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-ava": "^10.2.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-import-helpers": "^1.0.2",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-vue": "^6.2.2"
+    "eslint-plugin-ava": "^12.0.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-vue": "^7.11.1"
   },
   "devDependencies": {
-    "ava": "^3.5.1",
-    "commitizen": "^4.0.3",
-    "cz-conventional-changelog": "^3.1.0",
-    "eslint": "^6.8.0",
-    "semantic-release": "^17.0.4"
+    "ava": "^3.15.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.29.0",
+    "semantic-release": "^17.4.4"
   },
   "scripts": {
     "commit": "git-cz",

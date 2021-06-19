@@ -46,6 +46,27 @@
   </div>
 </template>
 
+<script>
+  import InputError from '../components/input-error'
+  import { FormInput } from '../mixins'
+
+  export default {
+    name: 'BaseInput',
+
+    components: {
+      InputError
+    },
+
+    mixins: [
+      FormInput({
+        type: [String, Number]
+      })
+    ],
+
+    inheritAttrs: false
+  }
+</script>
+
 <style scoped>
   .input {
     margin: 1rem 0;
@@ -109,24 +130,3 @@
     right: 0;
   }
 </style>
-
-<script>
-  import InputError from '../components/input-error'
-  import { FormInput } from '../mixins'
-
-  export default {
-    name: 'BaseInput',
-
-    components: {
-      InputError
-    },
-
-    mixins: [
-      FormInput({
-        type: [String, Number]
-      })
-    ],
-
-    inheritAttrs: false
-  }
-</script>

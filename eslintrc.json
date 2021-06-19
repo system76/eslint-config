@@ -10,15 +10,12 @@
   },
 
   "plugins": [
-    "ava",
-    "eslint-plugin-import-helpers",
-    "vue"
+    "ava"
   ],
 
   "extends": [
     "plugin:ava/recommended",
-    "plugin:vue/recommended",
-    "standard"
+    "@nuxtjs"
   ],
 
   "overrides": [{
@@ -29,46 +26,6 @@
   }],
 
   "rules": {
-    "import-helpers/order-imports": ["error", {
-      "alphabetize": {
-        "ignoreCase": true,
-        "order": "asc"
-      },
-      "groups": [
-        "module",
-        "/^@system76/",
-        "/~\//",
-        ["parent", "sibling", "index"]
-      ],
-      "newlinesBetween": "always"
-    }],
-
-    "vue/order-in-components": ["error", {
-      "order": [
-        "el",
-        "name",
-        "parent",
-        "functional",
-        ["delimiters", "comments"],
-        "layout",
-        "meta",
-        ["components", "directives", "filters"],
-        "extends",
-        "mixins",
-        "inheritAttrs",
-        "model",
-        ["props", "propsData"],
-        ["data", "asyncData"],
-        "computed",
-        "watch",
-        "LIFECYCLE_HOOKS",
-        "load",
-        "methods",
-        ["template", "render"],
-        "renderError"
-      ]
-    }],
-
     "vue/script-indent": ["error", 2, {
       "baseIndent": 1
     }]
